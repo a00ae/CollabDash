@@ -3,14 +3,14 @@ import babel from '@rolldown/plugin-babel'
 import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'vite'
 
-// https://vite.dev/config/
+// https://vite.dev
 export default defineConfig({
   plugins: [
-    react(),
-    tailwindcss(),
+    react(), // 1. محرك React الأساسي أولاً
+    tailwindcss(), // 2. معالج التنسيق Tailwind
     babel({ 
       presets: [
-        // تفعيل الـ Compiler الخاص بـ React 19 للتسريع التلقائي
+        // تفعيل الـ Compiler الخاص بـ React للتسريع التلقائي بدون استدعاء متغيرات غير مستخدمة
         ['@babel/preset-react', { runtime: 'automatic' }] 
       ] 
     })
