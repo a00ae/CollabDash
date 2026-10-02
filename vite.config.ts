@@ -6,9 +6,14 @@ import { defineConfig } from 'vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    tailwindcss(),
     react(),
-    babel({ presets: [reactCompilerPreset()] })
+    tailwindcss(),
+    babel({ 
+      presets: [
+        // تفعيل الـ Compiler الخاص بـ React 19 للتسريع التلقائي
+        ['@babel/preset-react', { runtime: 'automatic' }] 
+      ] 
+    })
   ],
   server: {
     port: 3000
