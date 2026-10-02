@@ -68,7 +68,7 @@ Ensure you have the latest LTS version of **Node.js** installed.
 ### Installation
 1. Clone the repository framework:
    ```bash
-   git clone https://github.com
+   git clone https://github.com/a00ae/CollabDash.git
    cd collabdash
    ```
 2. Ingest required workspace runtime dependencies:
